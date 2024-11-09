@@ -5,13 +5,19 @@ import Image from "next/image";
 import see_more from "./See_more.png";
 import { X } from "react-bootstrap-icons";
 
-const importAllImages = (context) => {
-  return context.keys().map(context);
+const importAllImages = (context: __WebpackModuleApi.RequireContext): { default: string }[] => {
+  return context.keys().map(context) as { default: string }[];
 };
 
 const allImages = importAllImages(require.context('./Images/', false, /\.(png|jpe?g|svg)$/));
 
-const Modal = ({ isOpen, onClose, images }) => {
+interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  images: { default: string }[]; // Assuming each image has a `default` export path as string
+}
+
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, images }) => {
   if (!isOpen) return null;
 
   return (
@@ -25,7 +31,7 @@ const Modal = ({ isOpen, onClose, images }) => {
           {images.map((src, index) => (
             <Image
               key={index}
-              src={src.default}
+              src={(src as { default: string }).default}
               alt={`Additional image ${index + 1}`}
               width={500}
               height={500}
@@ -56,7 +62,7 @@ export const Certificate = () => {
         {allImages.slice(0, 3).map((src, index) => (
           <Image
             key={index}
-            src={src.default}
+            src={(src as { default: string }).default}
             alt={`Image ${index + 1}`}
             width={500}
             height={500}
