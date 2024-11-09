@@ -8,14 +8,15 @@ import { Hackathons } from "./containers/Hackathons/Hackathon";
 import { Certificate } from "./containers/Certificate/Certificate";
 import { ContactMe } from "./containers/ContactMe/ContantMe";
 import { FloatingDockDemo } from "./FloatingDockDemo";
-import { Read } from "./Read";
-import { realtimeDb, ref, get } from '../lib/firebase';
+
+import { useEffect, useState } from 'react';
+import { db, getDoc, doc } from '../lib/firebase';
 
 export default function Home() {
   
   return (
     <div className="">
-      {/* <div>Heyy<Read/></div> */}
+      
       
       <div id="#"><HeroSection/></div>
       <AboutMe/>  
