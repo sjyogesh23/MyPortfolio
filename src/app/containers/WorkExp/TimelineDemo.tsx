@@ -13,13 +13,12 @@ export function TimelineDemo() {
             <div className="text-sm md:text-xl mb-2 font-semibold">Description</div>
             <ul className="text-xs md:text-lg text-neutral-800 list-disc">
               <li>
-              Developed engaging social media content and created comprehensive study materials for workshops, enhancing
-              participants&apos learning experiences and driving engagement.
+              Guided junior interns and collaborated with a developer team to provide UI designs for 3 company products,
+              enhancing user experience and functionality.
               </li>
               <li>
-              Served as a tutor for two batches, providing guidance and support in UI/UX design principles; graded final
-              projects and conducted a hands-on workshop in collaboration with the presidents of three colleges: Loyola
-              ICAM, Maher College, and SRM IST, Ramapuram.
+              Tutored 3 batches of 150+ students, graded final projects, and conducted a hands-on UI/UX Design workshop
+              in collaboration with the presidents of 3 colleges: SRM IST, Ramapuram, Loyola ICAM, Maher College.
               </li>
             </ul>
           </div>
@@ -49,12 +48,12 @@ export function TimelineDemo() {
             <div className="text-sm md:text-xl mb-2 font-semibold">Description</div>
             <ul className="text-xs md:text-lg text-neutral-800 list-disc">
               <li>
-              Spearheaded React JS and AWS projects at Seed Foundation, implementing Agile methodology for a significant
-              online presence.
+              Led a team to develop the official SEED Foundation website using React and AWS, following Agile processes,
+              with regular scrum meetings and effective client communication throughout the project lifecycle.
               </li>
               <li>
-              Spearheaded the development of the official website, achieving a 30% improvement in user engagement and a
-              25% reduction in bounce rate.
+              Successfully deployed the product, documented the development process, and conducted a knowledge transfer
+              session, providing valuable guidance to students seeking expertise in computer science.
               </li>
             </ul>
           </div>
@@ -84,7 +83,7 @@ export function TimelineDemo() {
         </div>
       ),
     },{
-      title: "MIT London",
+      title: "MIT Square London",
       subtitle:"Research Work (Internship)",
       date:"Oct 2023 - Dec 2023",
       content: (
@@ -93,8 +92,12 @@ export function TimelineDemo() {
             <div className="text-sm md:text-xl mb-2 font-semibold">Description</div>
             <ul className="text-xs md:text-lg text-neutral-800 list-disc">
               <li>
-              Granted a UK Design Patent for an AI-powered footwear system, featuring adaptive support, real-time activity
-              tracking, and personalized comfort through advanced AI integration.
+              Collaborated with Dr. Habib Ghanbarpourasl from Turkey, to design an AI-powered self-charging shoe using
+              piezoelectric sensors, offering a push to walk faster.
+              </li>
+              <li>
+              The innovative shoe design received UK Design Patent (No. 6369634) for its unique self-charging functionality
+              and comfort-enhancing features.
               </li>
             </ul>
           </div>
@@ -126,19 +129,18 @@ export function TimelineDemo() {
     },{
       title: "Shiash Info Solutions Private Limited",
       subtitle:"Java Developer (Internship)",
-      date:"Mar 2022 - May 2022",
+      date:"Aug 2022 - Nov 2022",
       content: (
         <div>
           <div className="mb-4">
             <div className="text-sm md:text-xl mb-2 font-semibold">Description</div>
             <ul className="text-xs md:text-lg text-neutral-800 list-disc">
               <li>
-              Acquired hands-on experience in Java programming during internship, proficient in handling classes and inference
-              using Apache NetBeans.
+              Developed and optimized backend functionality using Java SE, Angular, Spring Boot, and SQL, while resolving
+              30+ bugs to enhance system performance.
               </li>
               <li>
-              Received valuable instruction in fundamentals of Angular JS towards culmination of internship, broadening skill
-              set.
+              Identified and fixed critical issues in the codebase, improving application stability and reducing errors by 25%.
               </li>
             </ul>
           </div>
@@ -168,12 +170,11 @@ export function TimelineDemo() {
             <div className="text-sm md:text-xl mb-2 font-semibold">Description</div>
             <ul className="text-xs md:text-lg text-neutral-800 list-disc">
               <li>
-                Excelled in C++ programmer internship, demonstrating proficiency and enhancing skills over ten months of
-                collaborative development.
+              Led a team of C++ interns to develop a fully functional C++-based inventory management system, resolving
+              issues related to data consistency and streamlining the integration of OOPS concepts into real-world applications.
               </li>
               <li>
-                Promoted to Project Team Lead, leading and collaborating on projects like the Hospital Management System,
-                while furthering leadership and team management abilities.
+              Directed the development of a C++-based inventory management system, automating key processes and reducing manual errors by 30% and concluded with technical documentation for seamless client implementation.
               </li>
             </ul>
           </div>

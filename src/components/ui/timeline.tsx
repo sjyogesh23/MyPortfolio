@@ -27,7 +27,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 10%", "end 50%"],
+    offset: ["start 50%", "end 80%"],
   });
 
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
@@ -39,7 +39,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
 
-      <div ref={ref} className="relative max-w-8xl mx-12 md:mx-12 pb-10">
+      <div ref={ref} className="relative max-w-8xl mx-4 md:mx-12 pb-10">
         {data.map((item, index) => (
           <div
             key={index}

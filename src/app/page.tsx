@@ -13,7 +13,7 @@ export default function Home() {
       <div id="#"><HeroSection/></div>
       <AboutMe/>  
       <div id="Work"><TimelineDemo/></div>
-      <div className="min-h-screen mx-[60px] md:px-[60px]">
+      <div className="min-h-screen mx-[20px] md:px-[60px]">
       <div id="Skills"><MySkills/></div>
       <div id="Projects"><MyProjects/></div>
       <div id="Seminar"><Seminar/></div>

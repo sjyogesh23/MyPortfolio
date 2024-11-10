@@ -27,7 +27,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, images }) => {
           <X size={24} className="mb-4 top-2 right-2 text-lg focus:outline-none duration-200 ease-in-out hover:scale-150 hover:rotate-90" />
         </button>
 
-        <div className="grid grid-cols-2 gap-4 overflow-y-auto overflow-x-hidden h-[78vh]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 overflow-y-auto overflow-x-hidden h-[78vh]">
           {images.map((src, index) => (
             <Image
               key={index}
@@ -35,7 +35,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, images }) => {
               alt={`Additional image ${index + 1}`}
               width={500}
               height={500}
-              className="object-contain aspect-video duration-200 ease-in-out md:hover:scale-105"
+              className="object-contain md:aspect-video w-full duration-200 ease-in-out md:hover:scale-105"
             />
           ))}
         </div>
@@ -66,7 +66,7 @@ export const Certificate = () => {
             alt={`Image ${index + 1}`}
             width={500}
             height={500}
-            className="object-contain aspect-video size-96 w-full md:shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            className="object-contain md:aspect-video w-full md:shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
           />
         ))}
 
