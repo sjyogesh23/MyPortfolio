@@ -8,7 +8,7 @@ import { Riple } from 'react-loading-indicators';
 import projimg from './projectimg.jpg';
 export function MyProjects() {
   const [projects, setProjects] = useState<any>({});
-  const [loading, setLoading] = useState(true);  // Add loading state
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,7 +17,7 @@ export function MyProjects() {
         const snapshot = await get(projectsRef);
 
         if (snapshot.exists()) {
-          setProjects(snapshot.val()); // Set all projects dynamically
+          setProjects(snapshot.val());
         }
       } catch (error) {
         console.error("Error fetching data from Firebase:", error);
@@ -29,17 +29,16 @@ export function MyProjects() {
     fetchData();
   }, []);
 
-  // Dynamically generate tabs from the projects object
   const tabs = Object.keys(projects).map((category) => ({
-    title: category.charAt(0).toUpperCase() + category.slice(1), // Capitalize first letter
+    title: category.charAt(0).toUpperCase() + category.slice(1),
     value: category,
     content: (
-      <div className="w-full overflow-hidden relative h-[80vh] rounded-b-xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-neutral-100 to-neutral-200">
+      <div className="w-full overflow-y-auto relative h-[80vh] rounded-b-xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-neutral-100 to-neutral-200">
         <div className="grid grid-cols-1 md:grid-cols-3">
           {projects[category].map((project: any, index: number) => (
             <div
               key={index}
-              className="flex flex-col text-left md:p-4 rounded-md duration-200 ease-in-out hover:scale-105"
+              className="flex flex-col text-left md:p-4 rounded-md duration-200 ease-in-out hover:scale-105 mb-4"
             >
               <Image
                 src={project.url || projimg}
@@ -48,7 +47,7 @@ export function MyProjects() {
                 height={500}
                 className="rounded-lg object-contain aspect-video w-full bg-white shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
               />
-              <div className="flex justify-between my-2 md:my-4 items-end">
+              <div className="flex flex-col md:flex-row md:justify-between my-2 md:my-4 md:items-end">
                 <h5 className="text-lg md:text-xl font-semibold text-black">
                   {project.Title}
                 </h5>
@@ -63,7 +62,7 @@ export function MyProjects() {
                     href={project.Links[linkKey].url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-neutral-800 hover:bg-neutral-600 cursor-pointer w-fit text-white text-sm px-2 py-1 rounded-sm"
+                    className="flex items-center gap-1 md:gap-2 bg-neutral-800 hover:bg-neutral-600 cursor-pointer w-fit text-white text-xs md:text-sm px-2 py-1 rounded-sm"
                   >
                     {linkKey === "Preview" ? <Globe /> : <CodeSlash />}
                     {linkKey}

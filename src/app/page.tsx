@@ -8,6 +8,7 @@ import { Hackathons } from "./containers/Hackathons/Hackathon";
 import { Certificate } from "./containers/Certificate/Certificate";
 import { ContactMe } from "./containers/ContactMe/ContantMe";
 import { FloatingDockDemo } from "./FloatingDockDemo";
+import { Conference } from "./containers/Conference/Conference";
 export default function Home() {  
   return (
     <div className="">      
@@ -19,6 +20,7 @@ export default function Home() {
       <div id="Projects"><MyProjects/></div>
       <div id="Seminar"><Seminar/></div>
       <div id="Hackathon"><Hackathons/></div>
+      <div id="Conference"><Conference/></div>
       <div id="Certificate"><Certificate/></div>        
       </div>    
       <div id="Contact"><ContactMe/></div>

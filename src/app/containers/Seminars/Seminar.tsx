@@ -5,12 +5,13 @@ import img2 from './Seminar_pics/2.jpg';
 import img3 from './Seminar_pics/3.jpg';
 import img4 from './Seminar_pics/4.jpg';
 import img5 from './Seminar_pics/5.jpg';
+import { Globe } from "react-bootstrap-icons";
 
 export const Seminar = () => {
   const seminars = [
-    { img: img1, title: 'Web Applications', location: 'IGNITE\'23', date: 'Feb 2023', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.' },
+    { img: img1, title: 'Web Applications', location: 'IGNITE\'23', date: 'Feb 2023', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', weblink: 'https://srmrmp.edu.in/ignite-23-webinar-on-web-applications/' },
     { img: img2, title: 'Cybernaut Workshop', location: 'SRM IST, Rmp', date: 'Jan 2024', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.' },
-    { img: img3, title: 'Android App Development', location: 'IGNITE\'24', date: 'Jan 2024', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.' },
+    { img: img3, title: 'Android App Development', location: 'IGNITE\'24', date: 'Jan 2024', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', weblink: 'https://srmrmp.edu.in/android-app-development-using-java/'},
     { img: img4, title: 'Cybernaut Workshop', location: 'MAHER College', date: 'Jan 2024', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.' },
     { img: img5, title: 'Cybernaut Workshop', location: 'Loyola-ICAM', date: 'Feb 2024', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.' },
   ];
@@ -32,6 +33,11 @@ export const Seminar = () => {
               <div className='text-lg text-left'>{seminar.title}</div>
               <div className='text-sm flex justify-between my-2'><div>{seminar.location}</div><div>{seminar.date}</div></div>
               {/* <div className='text-xs text-justify mb-4'>{seminar.description}</div> */}
+              {seminar.weblink && (
+                <a className="bg-neutral-800 hover:bg-neutral-600 my-2 cursor-pointer w-fit text-white text-xs md:text-sm px-2 py-1 rounded-sm flex gap-2 items-center" href="https://srmrmp.edu.in/ignite-23-webinar-on-web-applications/" target="_blank">
+                  <Globe className="size-4" /> Link
+                </a>
+              )}
             </div>
 
             <div className="hidden absolute bottom-0 left-0 right-0 bg-gradient-to-b from-[#32006faa] to-[#32006fee] p-4 text-white h-full transition-all duration-500 w-full md:flex flex-col items-left justify-end -translate-x-[110%] group-hover:translate-x-0">
@@ -40,6 +46,12 @@ export const Seminar = () => {
               {/* <div className='text-xs 2xl:text-base text-left text-neutral-100 max-h-full overflow-y-auto'>
                 {seminar.description}
               </div> */}
+              {seminar.weblink && (
+                <a className="bg-neutral-100 hover:bg-neutral-200 my-2 cursor-pointer w-fit text-black text-xs md:text-sm px-2 py-1 rounded-sm flex gap-2 items-center" href="https://srmrmp.edu.in/ignite-23-webinar-on-web-applications/" target="_blank">
+                  <Globe className="size-4" /> Link
+                </a>
+              )}
+              
             </div>
           </div>
         ))}

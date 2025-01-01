@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
-import { House, SuitcaseLg, Tools, CodeSlash, Easel, Trophy, Award, Envelope } from "react-bootstrap-icons";
+import { House, SuitcaseLg, Tools, CodeSlash, Easel, Trophy, Award, Envelope, Easel2 } from "react-bootstrap-icons";
 
 export function FloatingDockDemo() {
   const links = [
@@ -48,6 +48,13 @@ export function FloatingDockDemo() {
         <Trophy className="h-full w-full text-neutral-500" />
       ),
       href: "#Hackathon",
+    },
+    {
+      title: "Conference",
+      icon: (
+        <Easel2 className="h-full w-full text-neutral-500" />
+      ),
+      href: "#Conference",
     },
     {
       title: "Certificates",
