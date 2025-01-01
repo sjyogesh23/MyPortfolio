@@ -1,22 +1,40 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import see_more from "./See_more.png";
 import { X } from "react-bootstrap-icons";
 
-const importAllImages = (context) => {
-  return context.keys().map(context);
+const importAllImages = (context: __WebpackModuleApi.RequireContext): { default: string }[] => {
+  return context.keys().map(context) as { default: string }[];
 };
 
 const allImages = importAllImages(require.context('./Images/', false, /\.(png|jpe?g|svg)$/));
 
-const Modal = ({ isOpen, onClose, images }) => {
-  if (!isOpen) return null;
+interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  images: { default: string }[]; // Assuming each image has a `default` export path as string
+}
 
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, images }) => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    } else {
+      document.body.style.overflow = ''; // Restore scroll
+    }
+    return () => {
+      document.body.style.overflow = ''; // Cleanup in case of unmount
+    };
+  }, [isOpen]);
+  if (!isOpen) return null;
+  const handleBackdropClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 ">
-      <div className="bg-white p-4 rounded-lg max-w-4xl h-[90vh] overflow-hidden">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 " onClick={onClose} >
+      <div className="bg-white p-4 rounded-lg max-w-4xl h-[90vh] overflow-hidden" onClick={handleBackdropClick}>
         <button className="grid justify-end w-full" onClick={onClose}>
           <X size={24} className="mb-4 top-2 right-2 text-lg focus:outline-none duration-200 ease-in-out hover:scale-150 hover:rotate-90" />
         </button>
@@ -25,7 +43,7 @@ const Modal = ({ isOpen, onClose, images }) => {
           {images.map((src, index) => (
             <Image
               key={index}
-              src={src.default}
+              src={(src as { default: string }).default}
               alt={`Additional image ${index + 1}`}
               width={500}
               height={500}
@@ -56,7 +74,7 @@ export const Certificate = () => {
         {allImages.slice(0, 3).map((src, index) => (
           <Image
             key={index}
-            src={src.default}
+            src={(src as { default: string }).default}
             alt={`Image ${index + 1}`}
             width={500}
             height={500}

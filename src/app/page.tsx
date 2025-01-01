@@ -8,30 +8,21 @@ import { Hackathons } from "./containers/Hackathons/Hackathon";
 import { Certificate } from "./containers/Certificate/Certificate";
 import { ContactMe } from "./containers/ContactMe/ContantMe";
 import { FloatingDockDemo } from "./FloatingDockDemo";
-import { Read } from "./Read";
-import { realtimeDb, ref, get } from '../lib/firebase';
-
-export default function Home() {
-  
+export default function Home() {  
   return (
-    <div className="">
-      {/* <div>Heyy<Read/></div> */}
-      
+    <div className="">      
       <div id="#"><HeroSection/></div>
       <AboutMe/>  
       <div id="Work"><TimelineDemo/></div>
       <div className="min-h-screen mx-[60px] md:px-[60px]">
-        
-        
       <div id="Skills"><MySkills/></div>
       <div id="Projects"><MyProjects/></div>
       <div id="Seminar"><Seminar/></div>
       <div id="Hackathon"><Hackathons/></div>
-      <div id="Certificate"><Certificate/></div>
-        
+      <div id="Certificate"><Certificate/></div>        
       </div>    
       <div id="Contact"><ContactMe/></div>
-      {/* <div className="hidden md:block fixed z-100 bottom-0 w-100 h-screen "><FloatingDockDemo/></div> */}
+      <div className="hidden md:block rounded-2xl  fixed z-10 bottom-10 m-auto -translate-x-[50%] left-[50%] "><FloatingDockDemo/></div>
     </div>
   );
 }

@@ -65,7 +65,7 @@ export function FloatingDockDemo() {
     },
   ];
   return (
-    <div className="flex z-100 items-end pb-16 justify-center h-screen w-full">
+    <div className="flex z-100 items-end justify-center h-fit w-full">
       <FloatingDock
         items={links}
       />

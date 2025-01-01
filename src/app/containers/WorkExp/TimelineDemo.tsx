@@ -1,6 +1,5 @@
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
-import Image from "next/image";
 import { Globe } from "react-bootstrap-icons";
 export function TimelineDemo() {
   const data = [
@@ -15,7 +14,7 @@ export function TimelineDemo() {
             <ul className="text-xs md:text-lg text-neutral-800 list-disc">
               <li>
               Developed engaging social media content and created comprehensive study materials for workshops, enhancing
-              participants' learning experiences and driving engagement.
+              participants&apos learning experiences and driving engagement.
               </li>
               <li>
               Served as a tutor for two batches, providing guidance and support in UI/UX design principles; graded final
