@@ -29,6 +29,19 @@
 .no-visible-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+@media (max-width: 768px) {
+  .mobilehiddenclass {
+    display: none;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 100%;
+  }
+}
+
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;

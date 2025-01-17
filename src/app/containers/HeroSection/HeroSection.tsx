@@ -5,7 +5,7 @@ import bgimg from "./bg_img.png";
 import Image from 'next/image';
 
 export const HeroSection = () => {
-    const words = ["Developer", "Designer", "ML Enthusiast", "Freelancer"];
+    const words = ["Developer", "Designer", "AI Enthusiast", "Data Scientist", "Freelancer"];
   return (
     <div className='relative h-screen flex flex-col md:flex-row overflow-x-hidden overflow-y-hidden justify-between bg-[#eee]'>
         <Image src={bgimg} alt='SJY' className='md:h-screen absolute object-contain duration-1500 ease-in-out right-[-50px] animate-wiggle -bottom-[50px] saturate-150'/>

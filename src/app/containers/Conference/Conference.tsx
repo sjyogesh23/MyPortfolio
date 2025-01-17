@@ -1,4 +1,3 @@
-import { Globe } from "react-bootstrap-icons";
 import Image from 'next/image';
 import img1 from './1.jpg';
 import projimg from './projectimg.jpg';

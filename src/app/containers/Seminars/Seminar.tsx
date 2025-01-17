@@ -34,25 +34,25 @@ export const Seminar = () => {
               <div className='text-sm flex justify-between my-2'><div>{seminar.location}</div><div>{seminar.date}</div></div>
               {/* <div className='text-xs text-justify mb-4'>{seminar.description}</div> */}
               {seminar.weblink && (
-                <a className="bg-neutral-800 hover:bg-neutral-600 my-2 cursor-pointer w-fit text-white text-xs md:text-sm px-2 py-1 rounded-sm flex gap-2 items-center" href="https://srmrmp.edu.in/ignite-23-webinar-on-web-applications/" target="_blank">
+                <a className="bg-neutral-800 hover:bg-neutral-600 my-2 cursor-pointer w-fit text-white text-xs md:text-sm px-2 py-1 rounded-sm flex gap-2 items-center" href={seminar.weblink} target="_blank" rel="noopener noreferrer">
                   <Globe className="size-4" /> Link
                 </a>
               )}
             </div>
-
-            <div className="hidden absolute bottom-0 left-0 right-0 bg-gradient-to-b from-[#32006faa] to-[#32006fee] p-4 text-white h-full transition-all duration-500 w-full md:flex flex-col items-left justify-end -translate-x-[110%] group-hover:translate-x-0">
-              <div className='text-lg 2xl:text-3xl text-left'>{seminar.title}</div>
-              <div className='text-xs 2xl:text-lg flex flex-col 2xl:flex-row text-left 2xl:justify-between my-1 xl:my-2 justify-between text-neutral-100'><div>{seminar.location}</div><div>{seminar.date}</div></div>
-              {/* <div className='text-xs 2xl:text-base text-left text-neutral-100 max-h-full overflow-y-auto'>
-                {seminar.description}
-              </div> */}
-              {seminar.weblink && (
-                <a className="bg-neutral-100 hover:bg-neutral-200 my-2 cursor-pointer w-fit text-black text-xs md:text-sm px-2 py-1 rounded-sm flex gap-2 items-center" href="https://srmrmp.edu.in/ignite-23-webinar-on-web-applications/" target="_blank">
-                  <Globe className="size-4" /> Link
-                </a>
-              )}
-              
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-[#32006faa] to-[#32006fee] p-4 text-white h-full transition-all duration-500 w-full md:flex flex-col items-left justify-end -translate-x-[110%] md:group-hover:translate-x-0">
+                <div className='text-lg 2xl:text-3xl text-left'>{seminar.title}</div>
+                <div className='text-xs 2xl:text-lg flex flex-col 2xl:flex-row text-left 2xl:justify-between my-1 xl:my-2 justify-between text-neutral-100'><div>{seminar.location}</div><div>{seminar.date}</div></div>
+                {/* <div className='text-xs 2xl:text-base text-left text-neutral-100 max-h-full overflow-y-auto'>
+                  {seminar.description}
+                </div> */}
+                {seminar.weblink && (
+                  <a className="bg-white hover:bg-neutral-800 my-2 cursor-pointer w-fit text-neutral-800 text-xs md:text-sm px-2 py-1 rounded-sm flex gap-2 items-center" href={seminar.weblink} target="_blank" rel="noopener noreferrer">
+                    <Globe className="size-4" /> Link
+                  </a>
+                )}
+                
             </div>
+            
           </div>
         ))}
       </div>
