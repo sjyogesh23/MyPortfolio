@@ -24,7 +24,7 @@ export default function Home() {
       <div id="Certificate"><Certificate/></div>        
       </div>    
       <div id="Contact"><ContactMe/></div>
-      <div className="hidden md:block rounded-2xl  fixed z-10 bottom-10 m-auto -translate-x-[50%] left-[50%] "><FloatingDockDemo/></div>
+      <div className="mobilehiddenclass rounded-2xl  fixed z-10 bottom-10 m-auto -translate-x-[50%] left-[50%] "><FloatingDockDemo/></div>
     </div>
   );
 }

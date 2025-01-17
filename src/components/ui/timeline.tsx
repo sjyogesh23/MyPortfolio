@@ -49,7 +49,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
                 <div className="h-2 w-2 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
-              <div className="hidden md:flex flex-col md:pl-16 ">
+              <div className="mobilehiddenclass md:flex flex-col md:pl-16 ">
                 <h5 className="md:text-2xl font-semibold text-black">
                   {item.title}
                 </h5>
